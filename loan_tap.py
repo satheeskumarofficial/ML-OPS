@@ -17,6 +17,10 @@ with open("artefacts/classifier.pkl", "rb") as model_file:
 def welcome_page():
     return "<h1> welcome to LOAN TAP!!</h2>"
 
+@app.route("/fill", methods = ["GET"])
+def first_page():
+    return "<h1> fill your details</h2>"
+
 @app.route("/predict", methods = ["POST"])
 def prediction():
     loan_req = request.get_json()
